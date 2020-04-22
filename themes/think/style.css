@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/*
+Theme Name: Think
+Theme URI: https://think-comunicacion.com
+Author: Bernardo Escoffié Torre
+Author URI: https://wordpress.org/
+Description: Custom theme
+Version: 1.0
+License: Propietary
+Text Domain: think
+Tags: custom
+*/
+/* FONTS */
+@import url("https://fonts.googleapis.com/css?family=Alegreya&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://use.typekit.net/sms4ezt.css");
+/* COLORS */
+/* BREAKPOINTS */
+:root {
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  width: 95%;
+  margin: auto;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,15 @@
+/* VARIABLES */
+/* FONTS */
+@import url("https://fonts.googleapis.com/css?family=Alegreya&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://use.typekit.net/sms4ezt.css");
+/* COLORS */
+/* BREAKPOINTS */
+:root {
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
+/*# sourceMappingURL=gutenberg.css.map */
