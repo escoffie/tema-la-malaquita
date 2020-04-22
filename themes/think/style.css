@@ -68,24 +68,67 @@ body {
       flex-basis: 100%;
 }
 
-@media screen and (min-width: 768px) {
+.burger-open {
+  text-align: right;
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 992px) {
   .burger-open {
     display: none;
   }
 }
 
 #menu-main {
+  font-family: "Vollkorn", serif;
   list-style: none;
   margin: 0;
   padding: 0;
-  font-family: "Vollkorn", serif;
-  text-align: right;
+  text-align: center;
 }
 
-#menu-main li {
-  display: inline-block;
-  margin-left: 2rem;
-  position: relative;
+@media screen and (max-width: 991px) {
+  #menu-main {
+    -webkit-transition: left .3s ease-out;
+    transition: left .3s ease-out;
+    font-size: 2rem;
+    background-color: #dedfe1;
+    position: absolute;
+    z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    left: -100vw;
+  }
+  #menu-main:after {
+    content: 'X';
+    position: absolute;
+    z-index: 3;
+    display: block;
+    top: 3rem;
+    right: 3rem;
+    font-family: "Montserrat", sans-serif;
+  }
+  #menu-main.active {
+    left: 0;
+  }
+}
+
+#menu-main li.current-menu-item a, #menu-main li.current-menu-parent a {
+  color: #fd5757;
 }
 
 #menu-main li a {
@@ -94,48 +137,57 @@ body {
   font-size: 1.2rem;
 }
 
-#menu-main li:hover > ul {
+#menu-main li > ul {
+  display: none;
+}
+
+#menu-main li.active > ul {
   display: block;
 }
 
-#menu-main li:hover a {
+#menu-main li.active a {
   color: #281915;
 }
 
-#menu-main li.current-menu-item a, #menu-main li.current-menu-parent a {
-  color: #fd5757;
-}
-
-#menu-main li > ul {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  background: #dedfe1;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  text-align: center;
-  padding: 0;
-  min-width: 150px;
-}
-
-#menu-main li > ul li {
-  display: block;
-  margin-left: 0;
-}
-
-#menu-main li > ul li a {
-  display: block;
-  padding: 0.25rem 1rem;
-  color: #205a41 !important;
-}
-
-#menu-main li > ul li:hover a {
-  background-color: #c3c5c9;
-}
-
-#menu-main li > ul li.current-menu-item a {
-  background-color: #fd5757;
-  color: white !important;
+@media screen and (min-width: 992px) {
+  #menu-main {
+    text-align: right;
+  }
+  #menu-main li {
+    display: inline-block;
+    margin-left: 2rem;
+    position: relative;
+  }
+  #menu-main li:hover > ul {
+    display: block;
+  }
+  #menu-main li > ul {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background: #dedfe1;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 0;
+    min-width: 150px;
+  }
+  #menu-main li > ul li {
+    display: block;
+    margin-left: 0;
+  }
+  #menu-main li > ul li a {
+    display: block;
+    padding: 0.25rem 1rem;
+    color: #205a41 !important;
+  }
+  #menu-main li > ul li:hover a {
+    background-color: #c3c5c9;
+  }
+  #menu-main li > ul li.current-menu-item a {
+    background-color: #fd5757;
+    color: white !important;
+  }
 }
 
 .site-footer {
