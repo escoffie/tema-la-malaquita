@@ -1,0 +1,48 @@
+.site-footer {
+    background-color: theme-color('primary');
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    a {
+        color: white;
+        text-decoration: none;
+        &:hover {
+            color: theme-color('info');
+        }
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        &#menu-social {
+            li {
+                display: inline-block;
+                padding: 0 0.25rem;
+                font-size: 1.75rem;
+            }
+        }
+        &#menu-legal {
+            margin: 1rem 0;
+        }
+    }
+    @media screen and (min-width:992px) {
+        .footer-grid {
+            width: 100%;
+            padding-right:33%;
+            display: grid;
+            grid-template-columns: 40% 20% 20% 20%;
+            .col-a,
+            .col-b,
+            .col-c {
+                text-align: left;
+            }
+            .col-b,
+            .col-c {
+                font-size: 0.75rem;
+            }
+            li {
+                padding-bottom: 0.5rem;
+            }
+        }
+    }
+}

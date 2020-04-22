@@ -13,63 +13,27 @@
     <div class="page-wrapper">
 
         <header class="site-header">
-            <div class="container">
-                <div class="nav-bar">
-                    <div class="main-logo">
+            <div class="row">
+                    <div class="main-logo column">
                         <?php the_custom_logo(); ?>
                     </div>
-                    <div class="burger-open">
-                        <i class="far fa-ellipsis-v"></i>
+                    <div class="main-nav column">
+                        <div class="burger-open">
+                            <i class="far fa-ellipsis-v"></i>
+                        </div>
+                        <?php
+                        $args = array(
+                            'theme_location'    =>  'menu-header-1',
+                            'container'         =>  'nav',
+                            'container_class'   =>  'menu-header',
+                        );
+                        wp_nav_menu($args);
+                        ?>
                     </div>
-                    <?php
-                    $args = array(
-                        'theme_location'    =>  'menu-social-1',
-                        'container'         =>  'nav',
-                        'container_class'   =>  'social-nav',
-                    );
-                    wp_nav_menu($args);
-                    ?>
-                </div>
             </div>
         </header>
 
         <main class="site-main container">
-
-                <?php
-                    $args = array(
-                        'theme_location'    =>  'menu-mobile-lang',
-                        'container'         =>  'nav',
-                        'container_class'   =>  'mobile-lang-nav-ul',
-                    );
-                    wp_nav_menu($args);
-                ?>
-
-                <?php
-                    $args = array(
-                        'theme_location'    =>  'menu-mobile-social',
-                        'container'         =>  'nav',
-                        'container_class'   =>  'mobile-social-nav-ul',
-                    );
-                    wp_nav_menu($args);
-                ?>
-
-
-            <div class="main-nav">
-                <div class="logo-mobile">
-                    <?php the_custom_logo(); ?>
-                    <div class="burger-close">
-                        <i class="far fa-times"></i>
-                    </div>
-                </div>
-                <?php
-                $args = array(
-                    'theme_location'    =>  'menu-header-1',
-                    'container'         =>  'nav',
-                    'container_class'   =>  'main-nav-ul',
-                );
-                wp_nav_menu($args);
-                ?>
-            </div>
 
             <section class="main-section">
                 <?php

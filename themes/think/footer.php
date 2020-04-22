@@ -2,35 +2,45 @@
     </main> <!-- /.site-main .container -->
 
     <footer class="site-footer">
-        <div class="footer-mobile">
-            <div class="call">
-                <a href="tel:+<?php echo preg_replace('/[^0-9]/', '', do_shortcode('[sixsens-contact type="phone" text-only=true]')); ?>">
-                    <i class="fas fa-3x fa-mobile-android-alt"></i> <?php echo __('Llamar', 'think'); ?>
-                </a>
+        <div class="footer-grid">
+            <div class="col-spacer"></div>
+            <div class="col-a">
+                <?php
+                $args = array(
+                    'theme_location'    =>  'menu-social-1',
+                    'container'         =>  'nav',
+                    'container_class'   =>  'menu-social',
+                );
+                wp_nav_menu($args);
+                ?>
+                <?php
+                $args = array(
+                    'theme_location'    =>  'menu-legal-1',
+                    'container'         =>  'nav',
+                    'container_class'   =>  'menu-legal',
+                );
+                wp_nav_menu($args);
+                ?>
+
+                <p><?php echo __('Copyright', 'think'); ?> &copy; <?php bloginfo('name'); ?> 2019-<?php echo date('Y'); ?></p> 
             </div>
-            <div class="whats">
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo preg_replace('/[^0-9]/', '', do_shortcode('[sixsens-contact type="whatsapp" text-only=true]')); ?>">
-                    <i class="fab fa-3x fa-whatsapp"></i> <?php echo __('Whatsapp', 'think'); ?>
-                </a>
+            <div class="col-b">
+                <?php
+                $args = array(
+                    'theme_location'    =>  'menu-footer-1',
+                    'container'         =>  'nav',
+                    'container_class'   =>  'menu-footer',
+                );
+                wp_nav_menu($args);
+                ?>                
             </div>
-            <div class="contact">
-                <a href="#" id="social-switch">
-                    <i class="fal fa-3x fa-share-alt"></i> <?php echo __('Social', 'think'); ?>
-                </a>
+
+            <div class="col-c">
+                <strong><?php echo __('Find us at', 'think'); ?></strong>
+                <p><?php echo do_shortcode('[think-contact type="address" fa-icon="map-marker"]'); ?></p> 
+                <p><?php echo do_shortcode('[think-contact type="phone" fa-icon="phone"]'); ?></p>
+                <p><?php echo do_shortcode('[think-contact type="email" fa-icon="envelope"]'); ?></p> 
             </div>
-            <div class="lang">
-                <a href="#" id="lang-switch">
-                    <i class="fal fa-3x fa-language"></i> <?php echo __('Idiomas', 'think'); ?>
-                </a>
-            </div>
-        </div>
-        <div class="container">
-            <p><?php echo __('Derechos reservados', 'think'); ?> &copy; <?php bloginfo('name'); ?> 2014-<?php echo date('Y'); ?></p> 
-            <p class="footer-desktop">
-                <?php echo do_shortcode('[sixsens-contact type="phone" fa-icon="phone"]'); ?> 
-                <?php echo do_shortcode('[sixsens-contact type="mobile" fa-icon="mobile"]'); ?> 
-                <?php echo do_shortcode('[sixsens-contact type="whatsapp" fa-icon="whatsapp" content="Whatsapp"]'); ?> 
-            </p>
         </div>
     </footer>
 

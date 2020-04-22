@@ -2,27 +2,27 @@
 
 // Customizer & theme support
 
-function sixsens_theme_support()
+function think_theme_support()
 {
 	add_theme_support('custom-logo');
 	add_theme_support('post-thumbnails');
 }
 
-add_action('after_setup_theme', 'sixsens_theme_support');
+add_action('after_setup_theme', 'think_theme_support');
 
 // Add custom fields to customizer
-if (!function_exists('sixsens_customizer_register')) :
-	function sixsens_customizer_register($wp_customize)
+if (!function_exists('think_customizer_register')) :
+	function think_customizer_register($wp_customize)
 	{
 
 		// Contact fields settings
-		$wp_customize->add_setting('contact_email', array('default' => '', 'capability' => 'edit_theme_options', 'sanitize_callback' => 'sixsens_sanitize_email'));
-		$wp_customize->add_setting('contact_phone', array('default' => '', 'capability' => 'edit_theme_options', 'sanitize_callback' => 'sixsens_sanitize_text'));
-		$wp_customize->add_setting('contact_mobile', array('default' => '', 'capability' => 'edit_theme_options', 'sanitize_callback' => 'sixsens_sanitize_text'));
-		$wp_customize->add_setting('contact_whatsapp', array('default' => '', 'capability' => 'edit_theme_options', 'sanitize_callback' => 'sixsens_sanitize_text'));
-		$wp_customize->add_setting('contact_url', array('default' => '', 'capability' => 'edit_theme_options', 'sanitize_callback' => 'sixsens_sanitize_url'));
-		$wp_customize->add_setting('contact_address', array('default' => '', 'capability' => 'edit_theme_options', 'sanitize_callback' => 'sixsens_sanitize_textarea'));
-		$wp_customize->add_setting('contact_open', array('default' => '', 'capability' => 'edit_theme_options', 'sanitize_callback' => 'sixsens_sanitize_textarea'));
+		$wp_customize->add_setting('contact_email', array('default' => '', 'capability' => 'edit_theme_options', 'sanitize_callback' => 'think_sanitize_email'));
+		$wp_customize->add_setting('contact_phone', array('default' => '', 'capability' => 'edit_theme_options', 'sanitize_callback' => 'think_sanitize_text'));
+		$wp_customize->add_setting('contact_mobile', array('default' => '', 'capability' => 'edit_theme_options', 'sanitize_callback' => 'think_sanitize_text'));
+		$wp_customize->add_setting('contact_whatsapp', array('default' => '', 'capability' => 'edit_theme_options', 'sanitize_callback' => 'think_sanitize_text'));
+		$wp_customize->add_setting('contact_url', array('default' => '', 'capability' => 'edit_theme_options', 'sanitize_callback' => 'think_sanitize_url'));
+		$wp_customize->add_setting('contact_address', array('default' => '', 'capability' => 'edit_theme_options', 'sanitize_callback' => 'think_sanitize_textarea'));
+		$wp_customize->add_setting('contact_open', array('default' => '', 'capability' => 'edit_theme_options', 'sanitize_callback' => 'think_sanitize_textarea'));
 
 		// Contact fields section
 		$wp_customize->add_section('contact_section', array(
@@ -109,7 +109,7 @@ if (!function_exists('sixsens_customizer_register')) :
 		));
 	}
 endif;
-add_action('customize_register', 'sixsens_customizer_register');
+add_action('customize_register', 'think_customizer_register');
 
 function encode_email($e)
 {
@@ -120,22 +120,22 @@ function encode_email($e)
 	return $output;
 }
 
-function sixsens_sanitize_email($url)
+function think_sanitize_email($url)
 {
 	return sanitize_email($url);
 }
 
-function sixsens_sanitize_url($url)
+function think_sanitize_url($url)
 {
 	return esc_url_raw($url);
 }
 
-function sixsens_sanitize_text($url)
+function think_sanitize_text($url)
 {
 	return sanitize_text_field($url);
 }
 
-function sixsens_sanitize_textarea($url)
+function think_sanitize_textarea($url)
 {
 	return sanitize_textarea_field($url);
 }
@@ -174,4 +174,4 @@ function contactShortcode($atts)
 	return $fa . $content;
 }
 
-add_shortcode('sixsens-contact', 'contactShortcode');
+add_shortcode('think-contact', 'contactShortcode');
