@@ -2,27 +2,27 @@ $adminbar-height-desktop: 32px;
 $adminbar-height-mobile: 46px;
 
 /* FONTS */
-@import url('https://fonts.googleapis.com/css?family=Alegreya&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-@import url("https://use.typekit.net/sms4ezt.css");
 
-$font-serif: 'Alegreya', serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,700;1,600&display=swap');
+
+$font-serif: 'Vollkorn', serif;
 $font-sans-serif: 'Montserrat', sans-serif;
-$font-header: 'tilda-petite', sans-serif;
+$font-header: $font-serif;
 
 /* COLORS */
-$gray: #707070;
-$soft-pink: #ED9C9E;
-$pale-gold: #C0B283;
-$silk: #DCD0D0;
+$gray: #dedfe1;
+$pink: #fd5757;
+$green: #205a41;
+$cocoa: #bb8d81;
 $paper: #F4F4F4;
-$charcoal: #373737;
+$charcoal: #101820;
 
 $theme-colors: (
-    'primary': $gray,
-    'secondary': $soft-pink,
-    'info': $silk,
-    'light': $paper,
+    'primary': $green,
+    'secondary': $pink,
+    'info': $cocoa,
+    'light': $gray,
     'dark': $charcoal,
 );
 

@@ -11,9 +11,8 @@ Text Domain: think
 Tags: custom
 */
 /* FONTS */
-@import url("https://fonts.googleapis.com/css?family=Alegreya&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
-@import url("https://use.typekit.net/sms4ezt.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,700;1,600&display=swap");
 /* COLORS */
 /* BREAKPOINTS */
 :root {
@@ -26,6 +25,7 @@ Tags: custom
 
 body {
   overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
 }
 
 .container {
