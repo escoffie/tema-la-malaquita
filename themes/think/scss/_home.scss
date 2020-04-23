@@ -1,0 +1,15 @@
+.home .page-header {
+    min-height: 600px;
+    position: relative;
+    h1 {
+        display: none;
+    }
+    &:before {
+        content: 'Merida, Mexico';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: white;
+        padding: 3rem;
+    }
+}

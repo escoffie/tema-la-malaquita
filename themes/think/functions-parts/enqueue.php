@@ -1,7 +1,7 @@
 <?php
 
 // Cargar scripts y styles
-function sixsens_scripts_styles() {
+function think_scripts_styles() {
 
     // CSS principal
     wp_enqueue_style('style', get_stylesheet_uri(), array(), '0.9');
@@ -11,7 +11,7 @@ function sixsens_scripts_styles() {
     wp_enqueue_script('app', get_template_directory_uri() . '/js/app.js', array('jquery'), '2', true);
 }
 
-add_action( 'wp_enqueue_scripts', 'sixsens_scripts_styles' );
+add_action( 'wp_enqueue_scripts', 'think_scripts_styles' );
 
 function add_gutenberg_assets() {
     wp_enqueue_style( 'style-gutenberg', get_theme_file_uri( '/gutenberg.css' ), false );

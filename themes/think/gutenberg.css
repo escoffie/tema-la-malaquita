@@ -11,4 +11,56 @@
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
 }
+
+.page-header {
+  height: 30vh;
+  min-height: 450px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center center;
+  background-color: #bb8d81;
+}
+
+.page-header h1 {
+  position: absolute;
+  bottom: 0;
+  text-align: right;
+  margin: 3rem 0;
+  font-family: "Vollkorn", serif;
+  font-size: 3rem;
+  color: #fd5757;
+}
+
+.entry-content,
+.wp-block {
+  line-height: 2.5rem;
+  font-size: 1.25rem;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: lighter !important;
+}
+
+.entry-content .alignwide,
+.wp-block .alignwide {
+  margin-left: -80px;
+  margin-right: -80px;
+}
+
+.entry-content .alignfull,
+.wp-block .alignfull {
+  margin-left: calc(-100vw / 2 + 100% / 2);
+  margin-right: calc(-100vw / 2 + 100% / 2);
+  max-width: 100vw;
+}
+
+.entry-content .alignfull img,
+.wp-block .alignfull img {
+  width: 100vw;
+}
+
+/* GUTENBERB / KADENCE specifics */
+.wp-block-image.alignfull.size-large:nth-of-type(1) {
+  margin-top: 0;
+}
 /*# sourceMappingURL=gutenberg.css.map */

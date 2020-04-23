@@ -23,8 +23,11 @@ Tags: custom
   --breakpoint-xl: 1200px;
 }
 
-body {
+html, body {
   overflow-x: hidden;
+}
+
+body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
@@ -32,7 +35,7 @@ body {
 
 .container {
   max-width: 1200px;
-  width: 95%;
+  width: 90%;
   margin: auto;
 }
 
@@ -190,6 +193,58 @@ body {
   }
 }
 
+.page-header {
+  height: 30vh;
+  min-height: 450px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center center;
+  background-color: #bb8d81;
+}
+
+.page-header h1 {
+  position: absolute;
+  bottom: 0;
+  text-align: right;
+  margin: 3rem 0;
+  font-family: "Vollkorn", serif;
+  font-size: 3rem;
+  color: #fd5757;
+}
+
+.entry-content,
+.wp-block {
+  line-height: 2.5rem;
+  font-size: 1.25rem;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: lighter !important;
+}
+
+.entry-content .alignwide,
+.wp-block .alignwide {
+  margin-left: -80px;
+  margin-right: -80px;
+}
+
+.entry-content .alignfull,
+.wp-block .alignfull {
+  margin-left: calc(-100vw / 2 + 100% / 2);
+  margin-right: calc(-100vw / 2 + 100% / 2);
+  max-width: 100vw;
+}
+
+.entry-content .alignfull img,
+.wp-block .alignfull img {
+  width: 100vw;
+}
+
+/* GUTENBERB / KADENCE specifics */
+.wp-block-image.alignfull.size-large:nth-of-type(1) {
+  margin-top: 0;
+}
+
 .site-footer {
   background-color: #205a41;
   color: white;
@@ -243,5 +298,23 @@ body {
   .site-footer .footer-grid li {
     padding-bottom: 0.5rem;
   }
+}
+
+.home .page-header {
+  min-height: 600px;
+  position: relative;
+}
+
+.home .page-header h1 {
+  display: none;
+}
+
+.home .page-header:before {
+  content: 'Merida, Mexico';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white;
+  padding: 3rem;
 }
 /*# sourceMappingURL=style.css.map */

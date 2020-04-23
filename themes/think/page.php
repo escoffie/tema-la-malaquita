@@ -3,12 +3,15 @@
 
 <?php while (have_posts()) :  the_post(); ?>
 
-    <div class="the-title-parent"><h1 class="the-title"><?php the_title(); ?></h1></div>
+    <div class="page-header" style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url('<?php echo get_the_post_thumbnail_url(); ?>')">
+        <div class="container">
+            <div class="the-title-parent"><h1 class="the-title"><?php the_title(); ?></h1></div>
+        </div>
+    </div>
 
-    <?php the_post_thumbnail(); ?>
-
-    <?php the_content(); ?>
-    
+    <div class="container entry-content">
+        <?php the_content(); ?>
+    </div>
     
     <?php
         $children = get_page_children(get_the_ID(), get_pages(array('sort_column' => 'menu_order')));

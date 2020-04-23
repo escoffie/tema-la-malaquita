@@ -1,7 +1,7 @@
 <?php
 
 // Menús
-function sixsens_menus() {
+function think_menus() {
     register_nav_menus(array(
         'menu-header-1'     => __( 'Main Menu', 'think' ),
         'menu-footer-1'     => __( 'Footer Menu', 'think' ),
@@ -10,4 +10,4 @@ function sixsens_menus() {
     ));
 }
 
-add_action( 'init', 'sixsens_menus' );
+add_action( 'init', 'think_menus' );

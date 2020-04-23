@@ -2,7 +2,7 @@
 
 // Widngets & Sidebars
 /*
-function sixsens_widgets_init() {
+function think_widgets_init() {
 
 	register_sidebar( array(
 		'name'          => __('Widgets en pie de página', 'think'),
@@ -15,5 +15,5 @@ function sixsens_widgets_init() {
 
 }
 
-add_action( 'widgets_init', 'sixsens_widgets_init' );
+add_action( 'widgets_init', 'think_widgets_init' );
 */

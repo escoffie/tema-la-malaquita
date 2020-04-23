@@ -8,3 +8,11 @@ add_action('after_setup_theme', function () {
 add_action('init', function () {
     add_post_type_support('page', 'excerpt');
 });
+
+/**
+ * Register support for Gutenberg wide images in your theme
+ */
+function mytheme_setup() {
+    add_theme_support( 'align-wide' );
+  }
+  add_action( 'after_setup_theme', 'mytheme_setup' );

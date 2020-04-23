@@ -33,7 +33,7 @@
             </div>
         </header>
 
-        <main class="site-main container">
+        <main class="site-main">
 
             <section class="main-section">
                 <?php
