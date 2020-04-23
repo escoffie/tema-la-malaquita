@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/cx660umuw37u/public_html/wp-content
+    - /bin/cp -R index.php $DEPLOYPATH
+    - /bin/cp -R languages $DEPLOYPATH/
+    - /bin/cp -R plugins $DEPLOYPATH/
+    - /bin/cp -R themes $DEPLOYPATH/
+    - /bin/cp -R uploads $DEPLOYPATH/
