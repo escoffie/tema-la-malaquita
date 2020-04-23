@@ -3,11 +3,18 @@
 
 <?php while (have_posts()) :  the_post(); ?>
 
-    <div class="page-header" style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url('<?php echo get_the_post_thumbnail_url(); ?>')">
-        <div class="container">
-            <div class="the-title-parent"><h1 class="the-title"><?php the_title(); ?></h1></div>
+    <?php if (has_post_thumbnail()) {
+        $gradient = '';
+        if(!is_front_page()) $gradient = 'linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), ';
+        ?>
+        <div class="page-header" style="background-image: <?php echo $gradient; ?> url('<?php echo get_the_post_thumbnail_url(); ?>')">
+            <div class="container">
+                <div class="the-title-parent"><h1 class="the-title"><?php the_title(); ?></h1></div>
+            </div>
         </div>
-    </div>
+        <?php
+    }?>
+
 
     <div class="container entry-content">
         <?php the_content(); ?>
