@@ -5,7 +5,7 @@
 
     <?php if (has_post_thumbnail()) {
         $gradient = '';
-        if(!is_front_page()) $gradient = 'linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), ';
+        if(!is_front_page()) $gradient = get_query_var('the_gradient');
         ?>
         <div class="page-header" style="background-image: <?php echo $gradient; ?> url('<?php echo get_the_post_thumbnail_url(); ?>')">
             <div class="container">

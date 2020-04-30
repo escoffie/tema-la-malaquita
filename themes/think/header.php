@@ -40,4 +40,6 @@
                 if ( function_exists('yoast_breadcrumb') and !is_front_page() ) {
                     yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
                 }
+
+                set_query_var('the_gradient', 'linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), ');
                 ?>
