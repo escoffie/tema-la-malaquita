@@ -40,6 +40,7 @@
                 <p><?php echo do_shortcode('[think-contact type="address" fa-icon="map-marker"]'); ?></p> 
                 <p><?php echo do_shortcode('[think-contact type="phone" fa-icon="phone"]'); ?></p>
                 <p><?php echo do_shortcode('[think-contact type="email" fa-icon="envelope"]'); ?></p> 
+                <p><?php echo do_shortcode('[think-contact type="url" fa-icon="browser"]'); ?></p> 
             </div>
         </div>
     </footer>

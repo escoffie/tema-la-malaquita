@@ -169,7 +169,7 @@ function contactShortcode($atts)
 		return '<a ' . $newWindow . ' href="https://api.whatsapp.com/send?phone=' . preg_replace('/[^0-9]/', '', get_theme_mod('contact_' . $a['type'])) . '">' . $fa . $content . '</a>';
 	}
 	if ($a['type'] == 'url') {
-		return '<a href="' . get_theme_mod('contact_' . $a['type']) . '">' . $fa . $content . '</a>';
+		return '<a href="' . get_theme_mod('contact_' . $a['type']) . '" target="_blank">' . $fa . $content . '</a>';
 	}
 	return $fa . $content;
 }

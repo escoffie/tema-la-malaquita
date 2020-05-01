@@ -1,0 +1,10 @@
+.woocommerce-loop-product__title {
+    font-family: $font-serif;
+    font-style: italic;
+    color: darken(theme-color('light'), 50%);
+    text-align: center;
+}
+
+.product_type_simple {
+    display: none !important;
+}

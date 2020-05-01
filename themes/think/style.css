@@ -204,10 +204,14 @@ body {
   background-color: #bb8d81;
 }
 
+.page-header .the_title_parent {
+  position: absolute;
+  bottom: 0;
+}
+
 .page-header h1 {
   position: absolute;
   bottom: 0;
-  text-align: right;
   margin: 3rem 0;
   font-family: "Vollkorn", serif;
   font-size: 3rem;
@@ -220,6 +224,18 @@ body {
   font-size: 1.25rem;
   font-family: "Montserrat", sans-serif !important;
   font-weight: lighter !important;
+}
+
+.entry-content a,
+.wp-block a {
+  color: #205a41;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.entry-content a:hover,
+.wp-block a:hover {
+  color: black;
 }
 
 .entry-content .alignwide,
@@ -243,6 +259,17 @@ body {
 /* GUTENBERB / KADENCE specifics */
 .wp-block-image.alignfull.size-large:nth-of-type(1) {
   margin-top: 0;
+}
+
+.woocommerce-loop-product__title {
+  font-family: "Vollkorn", serif;
+  font-style: italic;
+  color: #5b5e65;
+  text-align: center;
+}
+
+.product_type_simple {
+  display: none !important;
 }
 
 .site-footer {
