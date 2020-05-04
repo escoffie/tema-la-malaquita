@@ -238,6 +238,12 @@ body {
   color: black;
 }
 
+.entry-content h1,
+.wp-block h1 {
+  font-family: "Vollkorn", serif !important;
+  font-size: 2.5rem !important;
+}
+
 .entry-content h2,
 .entry-content h3,
 .wp-block h2,
@@ -289,11 +295,16 @@ body {
   margin-top: 0;
 }
 
-.woocommerce-loop-product__title {
+h2.woocommerce-loop-product__title {
   font-family: "Vollkorn", serif;
   font-style: italic;
+  font-size: initial !important;
   color: #5b5e65;
   text-align: center;
+}
+
+h2.woocommerce-loop-product__title:after {
+  content: none;
 }
 
 .product_type_simple {

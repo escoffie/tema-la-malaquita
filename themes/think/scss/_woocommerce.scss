@@ -1,8 +1,12 @@
-.woocommerce-loop-product__title {
+h2.woocommerce-loop-product__title {
     font-family: $font-serif;
     font-style: italic;
+    font-size: initial !important;
     color: darken(theme-color('light'), 50%);
     text-align: center;
+    &:after {
+        content: none;
+    }
 }
 
 .product_type_simple {
