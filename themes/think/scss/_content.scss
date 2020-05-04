@@ -23,6 +23,7 @@
     }
 }
 
+
 .entry-content,
 .wp-block {
     line-height: 2.5rem;
@@ -36,6 +37,30 @@
         font-weight: bold;
         &:hover {
             color: darken(theme-color('primary'), 50%);
+        }
+    }
+
+    h2,
+    h3 {
+        font-family: $font-serif;
+        font-size: 1.5rem !important;
+        font-weight: bolder;
+        font-style: italic;
+        color: lighten(black, 40%);
+        position: relative;
+
+    }
+
+    h2 {
+        margin-top: 2rem;
+        &:after {
+            content: '';
+            position: absolute;
+            top: -1rem;
+            left: 0;
+            height: 0.35rem;
+            width: 120px;
+            background-color: theme-color('info');
         }
     }
 
