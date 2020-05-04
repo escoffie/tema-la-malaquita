@@ -272,6 +272,33 @@ body {
   display: none !important;
 }
 
+.woocommerce-result-count,
+.product_title.entry-title,
+.related.products > h2 {
+  font-family: "Vollkorn", serif;
+  font-size: 1.75rem !important;
+  font-weight: bolder;
+  color: #205a41;
+  position: relative;
+}
+
+.woocommerce-result-count:after,
+.product_title.entry-title:after,
+.related.products > h2:after {
+  content: '';
+  position: absolute;
+  bottom: -.5rem;
+  left: 0;
+  height: 0.35rem;
+  width: 120px;
+  background-color: #bb8d81;
+}
+
+.related.products {
+  background-color: #f1e7e4;
+  padding: 1rem 0;
+}
+
 .site-footer {
   background-color: #205a41;
   color: white;
